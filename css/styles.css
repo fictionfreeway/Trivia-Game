@@ -1,0 +1,363 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/* general style rules for all pages */
+body {
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 450%;
+    font-family: "Bauhaus 93", Tahoma, Arial;
+    text-align: center;
+    margin-top: 30px;
+    color: #35ff69;
+}
+
+h1 a {
+    color: #35ff69;
+    text-decoration: none;
+}
+
+
+
+
+/* style rules for home page/category select */
+
+.trivia-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60%;
+    padding: 50px;
+    background-color: #fff;
+    height: auto;
+    margin: 100px auto; 
+    text-align: center;
+    border: 2px solid #35FF69;
+    background-color: #222222;
+}
+
+.trivia-categories h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%;
+    color: #5cdb95;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.category {
+    margin-bottom: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: filter;
+    transition-duration: .2s;
+    filter: grayscale(100%);
+    font-size: 200%;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #35FF69;
+    border-radius: 20px;
+}
+
+.category:hover {
+    filter: none;
+}
+
+.category p {
+    margin-top: 160px;
+    color: #fff;
+}
+
+
+
+/* style rules for all quiz pages */
+.question-box {
+    padding: 25px;
+    position: absolute;
+    width: 50%;
+    background-color: #222222;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 400px;
+    color: #EDF5E1;
+    top: 200px;
+    border: 5px solid #5cdb95;
+    border-radius: 40px;
+    z-index: 1;
+    align-content: center;
+}
+
+.question-text {
+    font-family: arial;
+    font-size: 200%;
+    text-align: center;
+    color: #35ff69;
+}
+
+.answer {
+    transition: transform, box-shadow, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    color: #222222;
+    flex-basis: 30%;
+    height: 75px;
+    background-color: #7e8987;
+    text-align: center;
+    padding: 20px;
+    margin: 30px;
+    font-size: 2em;
+    border-radius: 80px;
+    line-height: 75px;
+    vertical-align: middle;
+}
+
+.answer:hover {
+    transition-duration: .2s;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #3b815a;
+    cursor: pointer;
+    background-color: #5cdb95;
+}
+
+.answers {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+input[type="radio"] {
+    position: fixed;
+    opacity: 0;
+}
+
+.correct {
+    transition: .5s;
+    padding: 25px;
+    position: absolute;
+    width: 50%;
+    background-color: #222222;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    color: #35ff69;
+    top: 200px;
+    justify-content: flex-end;
+    border-radius: 40px;
+    border: 5px solid #35FF69;
+    box-shadow: 0px 0px 30px #187931;
+    z-index: 0;
+    opacity: 0;
+    height: 400px;
+}
+
+.correct h2 {
+    text-align: center;
+    line-height: 400px;
+    vertical-align: middle;
+    font-family: Arial;
+    font-size: 400%
+}
+
+.incorrect {
+    transition: .5s;
+    padding: 25px;
+    position: absolute;
+    width: 50%;
+    background-color: #222222;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    color: #ff0000;
+    top: 200px;
+    justify-content: flex-end;
+    border: 5px solid #ff0000;
+    box-shadow: 0px 0px 30px #860000;
+    border-radius: 40px;
+    z-index: 0;
+    opacity: 0;
+    height: 400px;
+}
+
+.incorrect h2 {
+    text-align: center;
+    line-height: 400px;
+    vertical-align: middle;
+    font-family: Arial;
+    font-size: 400%
+}
+
+.results {
+    transition: transform;
+    transition-duration: 1s;
+    position: absolute;
+    width: 40%;
+    height: 200px;
+    padding-top: 75px;
+    background-color: #5cdb95;
+    color: #222222;
+    top: 300px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: translate(-200%);
+    z-index: 3;
+    line-height: 300%;
+    text-align: center;
+    box-shadow: 0px 0px 30px #306e4c;
+    border-radius: 20px;
+}
+
+.results h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+    display: inline;
+}
+
+.results p {
+    font-size: 150%;
+    display: inline;
+}
+
+#play-again {
+    transition: transform;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: absolute;
+    display: block;
+    background-color: #474c4c;
+    top: 700px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 10%;
+    text-align: center;
+    padding: 20px;
+    font-family: arial;
+    font-size: 250%;
+    border-radius: 50px;
+    border: 5px solid #35FF69;
+    color: #35FF69;
+    transform: scale(0);
+}
+
+/* change size of question box and answers to fit content on lower resolution screens */
+@media (max-width: 1500px) and (min-width: 700px) {
+    .question-box {
+        width: 75%;
+    }
+
+    .correct {
+        width: 75%;
+    }
+
+    .incorrect {
+        width: 75%;
+    }
+}
+
+/* change categories screen for mobile */
+@media (max-width: 1000px) and (min-width: 700px) {
+    .trivia-categories {
+        width: 80%;
+        display: block;
+    }
+
+    .category {
+        margin: 100px 200px;
+    }
+}
+
+/* change answers and heading to better fit mobile with portrait orientation */
+@media (orientation: portrait) and (max-width: 699px) {
+    h1 {
+        font-size: 300%;
+    }
+
+    .question-box {
+        top: 100px;
+        width: 80%;
+        height: 70vh;
+    }
+
+    .question-text {
+        font-size: 150%;
+    }
+
+    .answer {
+        flex-basis: 90%;
+        height: 40px;
+        line-height: 40px;
+        margin: 15px auto;
+        font-size: 175%;
+    }
+
+    .correct {
+        top: 100px;
+        width: 80%;
+        height: 70vh;
+    }
+
+    .incorrect {
+        top: 100px;
+        width: 80%;
+        height: 70vh;
+    }
+}
