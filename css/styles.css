@@ -339,14 +339,16 @@ input[type="radio"] {
 
     .question-text {
         font-size: 150%;
+        height: 75px;
+        line-height: 120%;
     }
 
     .answer {
         flex-basis: 90%;
-        height: 40px;
-        line-height: 40px;
+        height: 20px;
+        line-height: 20px;
         margin: 15px auto;
-        font-size: 175%;
+        font-size: 165%;
     }
 
     .correct {
