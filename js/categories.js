@@ -6,19 +6,19 @@ const triviaCategories = {
     {
         id: 'HP',
         name: 'Harry Potter',
-        imageSource: '../images/harrypotter.jpg',
-        quizLink: './harrypotterquiz.html'
+        imageSource: 'images/harrypotter.jpg',
+        quizLink: 'harrypotterquiz.html'
     },
      {
         id: 'office',
         name: 'The Office',
-        imageSource: '../images/theoffice.jpg',
-        quizLink: './officequiz.html'
+        imageSource: 'images/theoffice.jpg',
+        quizLink: 'officequiz.html'
      },
      {
          id: 'star',
          name: 'Star Wars',
-         imageSource: '../images/starwars.jpg',
+         imageSource: 'images/starwars.jpg',
          quizLink: '#'
      }  
     ]
