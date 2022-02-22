@@ -362,4 +362,12 @@ input[type="radio"] {
         width: 80%;
         height: 70vh;
     }
+
+    .results {
+        width: 80%;
+    }
+
+    #play-again {
+        width: 50%;
+    }
 }
